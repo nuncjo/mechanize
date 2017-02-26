@@ -963,7 +963,7 @@ class CookieTests(unittest.TestCase):
 ##         interact_netscape(c, "http://cracker.mall.com/",
 ##                           '$Version="1"; Domain=.mall.com')
 ##         h = interact_netscape(c, "http://victim.mall.com/")
-##         print h
+##         print(h)
 
     def test_Cookie_iterator(self):
         from mechanize import CookieJar, Cookie, DefaultCookiePolicy
@@ -1828,13 +1828,13 @@ class LWPCookieTests(unittest.TestCase, TempfileTestMixin):
 ##         res = FakeResponse(
 ##             headers,
 ##             'http://www.trip.com/trs/trip/flighttracker/flight_tracker_home.xsl')
-##         #print res
+##         #print(res)
 
 ##         c = CookieJar()
 ##         c.extract_cookies(res, req)
-##         #print c
-##         print str(c)
-##         print """Set-Cookie3: trip.appServer="1111-0000-x-024"; path="/"; domain=".trip.com"; path_spec; discard; version=0
+##         #print(c)
+##         print(str(c))
+##         print("""Set-Cookie3: trip.appServer="1111-0000-x-024"; path="/"; domain=".trip.com"; path_spec; discard; version=0)
 ##         Set-Cookie3: JSESSIONID="fkumjm7nt1.JS24"; path="/trs"; domain="www.trip.com"; path_spec; discard; version=1
 ##         """
 ##         assert c.as_lwp_str() == """Set-Cookie3: trip.appServer="1111-0000-x-024"; path="/"; domain=".trip.com"; path_spec; discard; version=0

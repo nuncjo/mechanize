@@ -171,7 +171,7 @@ class TwistedServerProcess(ServerProcess):
             port = "80"
         self.port = int(port)
         # def report(msg):
-        #     print "%s: %s" % (name, msg)
+        #     print("%s: %s" % (name, msg))
         report = lambda msg: None
         self.report_hook = report
         self._log = log

@@ -364,7 +364,7 @@ class BrowserTests(TestCase):
         def test_state_error(method_names):
             for attr in method_names:
                 method = getattr(b, attr)
-                #print attr
+                #print(attr)
                 self.assertRaises(mechanize.BrowserStateError, method)
             self.assertRaises(mechanize.BrowserStateError, b.select_form,
                               name="blah")
@@ -499,8 +499,8 @@ class BrowserTests(TestCase):
             # nr
             link = b.find_link()
 ##             print
-##             print exp
-##             print link
+##             print(exp)
+##             print(link)
             self.assertEqual(link, exp)
 
     def test_link_whitespace(self):

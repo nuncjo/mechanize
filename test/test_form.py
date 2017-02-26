@@ -2642,7 +2642,7 @@ class FormTests(unittest.TestCase):
             f.seek(0)
             c = form.find_control("form.grocery")
             #for item in c.items:
-            #    print [label.text for label in item.get_labels()] 
+            #    print([label.text for label in item.get_labels()])
             c.set_value_by_label(
                 ["Loaf of Bread", "Loaf of Bread", "Loaf of Challah"])
             if backwards_compat:
@@ -3410,12 +3410,12 @@ class UploadTests(_testcase.TestCase):
         data_control = form.find_control("data")
         data = "blah\nbaz\n"
         data_control.add_file(StringIO(data))
-        #print "data_control._upload_data", data_control._upload_data
+        #print("data_control._upload_data", data_control._upload_data)
         req = form.click()
         self.assertTrue(get_header(req, "Content-type").startswith(
                 "multipart/form-data; boundary="))
 
-        #print "req.get_data()\n>>%s<<" % req.get_data()
+        #print("req.get_data()\n>>%s<<" % req.get_data())
 
         # ...and check the resulting request is understood by cgi module
         fs = cgi.FieldStorage(StringIO(req.get_data()),
@@ -3463,7 +3463,7 @@ class UploadTests(_testcase.TestCase):
         self.assertTrue(get_header(req, "Content-type").startswith(
                 "multipart/form-data; boundary="))
 
-        #print "req.get_data()\n>>%s<<" % req.get_data()
+        #print("req.get_data()\n>>%s<<" % req.get_data())
 
         # ...and check the resulting request is understood by cgi module
         fs = cgi.FieldStorage(StringIO(req.get_data()),

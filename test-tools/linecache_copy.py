@@ -118,14 +118,14 @@ def updatecache(filename, module_globals=None):
                     pass
         else:
             # No luck
-##          print '*** Cannot stat', filename, ':', msg
+##          print('*** Cannot stat', filename, ':', msg)
             return []
     try:
         fp = open(fullname, 'rU')
         lines = fp.readlines()
         fp.close()
     except IOError, msg:
-##      print '*** Cannot open', fullname, ':', msg
+##      print('*** Cannot open', fullname, ':', msg)
         return []
     size, mtime = stat.st_size, stat.st_mtime
     cache[filename] = size, mtime, lines, fullname

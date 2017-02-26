@@ -58,7 +58,7 @@ still a comment , blah and a space at the end
         def _get_parser(data, encoding):
             f = StringIO(data)
             p = parser_class(f, encoding=encoding)
-            #print 'p._entitydefs>>%s<<' % p._entitydefs['&mdash;']
+            #print('p._entitydefs>>%s<<' % p._entitydefs['&mdash;'])
             return p
 
         for data in datas:
@@ -127,7 +127,7 @@ still a comment , blah and a space at the end
         self.assertEqual(p.get_token(), ("endtag", "html", None))
         self.assertEqual(p.get_token(), ("data", "\n", None))
         self.assertRaises(NoMoreTokensError, p.get_token)
-#        print "token", p.get_token()
+#        print("token", p.get_token())
 #        sys.exit()
 
     def test_unget_token(self):
@@ -163,7 +163,7 @@ still a comment , blah and a space at the end
         self.assertEqual(p.get_tag(), ("endtag", "body", None))
         self.assertEqual(p.get_tag(), ("endtag", "html", None))
         self.assertRaises(NoMoreTokensError, p.get_tag)
-#        print "tag", p.get_tag()
+#        print("tag", p.get_tag())
 #        sys.exit()
 
     def test_get_text(self):
@@ -195,7 +195,7 @@ still a comment , blah and a space at the end
         self.assertEqual(p.get_text(), "")
         self.assertEqual(p.get_text(), "")
         self.assertRaises(NoMoreTokensError, p.get_token)
-        #print "text", `p.get_text()`
+        #print("text", `p.get_text()`)
         #sys.exit()
 
     def test_get_text_2(self):

@@ -244,13 +244,12 @@ class MSIEBase:
             to_read = (size - 2) * sector
 
 ##             from urllib import quote
-##             print "data", quote(data)
-##             print "sig", quote(sig)
-##             print "size in sectors", size
-##             print "size in bytes", size*sector
-##             print "size in units of 16 bytes", (size*sector) / 16
-##             print "size to read in bytes", to_read
-##             print
+##             print("data", quote(data))
+##             print("sig", quote(sig))
+##             print("size in sectors", size)
+##             print("size in bytes", size*sector)
+##             print("size in units of 16 bytes", (size*sector) / 16)
+##             print("size to read in bytes", to_read)
 
             if sig != "URL ":
                 assert sig in ("HASH", "LEAK", \

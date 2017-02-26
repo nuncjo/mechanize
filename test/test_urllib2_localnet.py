@@ -54,8 +54,8 @@ class LoopbackHttpServerThread(threading.Thread):
         if handle_request is None:
             handle_request = self._handle_request
         self.httpd = LoopbackHttpServer(('127.0.0.1', 0), handle_request)
-        #print "Serving HTTP on %s port %s" % (self.httpd.server_name,
-        #                                      self.httpd.server_port)
+        #print("Serving HTTP on %s port %s" % (self.httpd.server_name,
+        #                                      self.httpd.server_port))
         self.port = self.httpd.server_port
 
     def set_request_handler(self, request_handler):
